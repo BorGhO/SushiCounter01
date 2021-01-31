@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SushiCounter01</string>
+    <string name="app_name">Sushi Counter</string>
     <string name="app_tag">SushiCounter</string>
     <string name="title_home">Home</string>
     <string name="title_ordine">Ordine</string>

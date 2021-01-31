@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/second_host_fragment"
 
-        class="com.keepon.sushicounter01.ui.dashboard.DashboardFragment"
+        class="com.keepon.sushicounter01.ui.ordineFolder.OrdineFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
 

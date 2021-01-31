@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".ui.dashboard.DashboardFragment">
+    tools:context=".ui.ordineFolder.OrdineFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineOrdine"
@@ -23,6 +23,14 @@
         app:layout_constraintEnd_toStartOf="@+id/guidelineOrdine"
         tools:layout_editor_absoluteY="0dp">
 
+        <Button
+            android:id="@+id/startMenuButt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu"
+            android:onClick="startMenu"
+            />
+
         <TextView
             android:id="@+id/text_dashboard"
             android:layout_width="match_parent"
@@ -37,6 +45,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ordineRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

@@ -65,27 +65,23 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-                /*, destination, _ ->
-            if(destination.id == R.id.full_screen_destination) {
-                toolbar.visibility = View.GONE
-                bottomNavigationView.visibility = View.GONE
-            } else {
-                toolbar.visibility = View.VISIBLE
-                bottomNavigationView.visibility = View.VISIBLE
-            }
-        }*/
 
         textProva = findViewById(R.id.textMainProva)
-        //textProva.text = CoseUtili.textToPass ?: "porco"
+
 
         val Coso: CoseUtili by viewModels()
         Coso.selectedItem.observe(this, Observer { item ->
+        //Coso.selectedItem.observeForever( Observer { item ->
             // Perform an action with the latest item data
             textProva.text = item.toString()
         })
+
+
+
+
     }
 
         fun toSecondAct(view: View){
-                startActivity(Intent(this, SecondActivity::class.java ))
+            startActivity(Intent(this, SecondActivity::class.java ))
         }
 }

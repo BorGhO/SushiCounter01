@@ -4,12 +4,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/sushi_counter_icon01"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/sushi_counter_icon01_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SushiCounter01">
         <activity android:name=".SecondActivity"></activity>
+        <activity android:name=".MenuRecycler"></activity>
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">

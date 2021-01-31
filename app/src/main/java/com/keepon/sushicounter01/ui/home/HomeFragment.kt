@@ -44,9 +44,9 @@ class HomeFragment : Fragment() {
 
     private fun buttHomeFragPress(){
 
-        var coso = CoseUtili.textToPass.toString()
+        var coso = editTextFHomeProva.text.toString()
         CoseUtili.textToPass = coso
-        viewModel.selectItem(coso)
+            viewModel.selectItem(coso)
 
         println(coso)
     }

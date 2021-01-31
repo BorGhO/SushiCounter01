@@ -14,9 +14,9 @@
 
     <fragment
         android:id="@+id/navigation_ordine"
-        android:name="com.keepon.sushicounter01.ui.dashboard.DashboardFragment"
+        android:name="com.keepon.sushicounter01.ui.ordineFolder.OrdineFragment"
         android:label="@string/title_ordine"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_ordine" />
 
     <fragment
         android:id="@+id/navigation_notifications"
