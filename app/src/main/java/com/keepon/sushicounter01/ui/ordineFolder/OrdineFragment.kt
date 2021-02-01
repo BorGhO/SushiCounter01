@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -16,6 +17,7 @@ import com.keepon.sushicounter01.R
 class OrdineFragment : Fragment() {
 
     private lateinit var dashboardViewModel: OrdineViewModel
+    private lateinit var frecciaDesc: ImageView
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -41,7 +43,7 @@ class OrdineFragment : Fragment() {
         return root
     }
 
-    fun startMenu(view: View){
+    fun openDesc(){
 
 
     }
