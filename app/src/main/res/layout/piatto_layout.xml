@@ -2,10 +2,10 @@
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/piatto_shape_layout"
-
 
     android:orientation="vertical"
     android:paddingTop="10dp">
@@ -50,13 +50,13 @@
 
     <TextView
         android:id="@+id/piattoDescText01"
-        android:layout_width="0dp"
-       android:visibility="gone"
+        android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="wrap_content"
         android:text="descrizione"
         android:textAlignment="center"
         android:textSize="20sp"
-        android:paddingBottom="10dp"
+        android:padding="15dp"
         />
 
 </LinearLayout>

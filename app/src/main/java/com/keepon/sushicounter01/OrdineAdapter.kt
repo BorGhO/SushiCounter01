@@ -61,6 +61,8 @@ class OrdineAdapter (data:ArrayList<PiattoClass>, var context: Context) : Recycl
             holder.image.setImageResource(data[position].img)
             holder.categoria = data[position].categ
             holder.descSelected = data[position].descSelected
+
+            descClick(holder)
 /*
 
             if (position % 2 == 0)
@@ -72,8 +74,12 @@ class OrdineAdapter (data:ArrayList<PiattoClass>, var context: Context) : Recycl
 
             holder.freccia.setOnClickListener{
 
-                println("cliccata freccia")
-                holder.descSelected = !holder.descSelected
+
+                data[position].descSelected = !data[position].descSelected
+                holder.descSelected = data[position].descSelected
+
+                println("cliccata freccia " + holder.descSelected)
+                println("desc " + holder.desc.toString())
                 descClick(holder)
             }
 
@@ -82,10 +88,16 @@ class OrdineAdapter (data:ArrayList<PiattoClass>, var context: Context) : Recycl
 
         private fun descClick(holded: ViewHolder){
 
-            if(holded.descSelected)
+            if(holded.descSelected) {
                 holded.freccia.background = context.getDrawable(R.drawable.up_chevron)
-            else
+                holded.desc.visibility = View.VISIBLE
+            }else {
                 holded.freccia.background = context.getDrawable(R.drawable.down_chevron)
+               /* if (holded.categoria == "salmone")
+                    holded.desc.visibility = View.INVISIBLE
+                else*/
+                    holded.desc.visibility = View.GONE
+            }
         }
 
         override fun getItemCount(): Int{
