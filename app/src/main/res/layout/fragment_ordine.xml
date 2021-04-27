@@ -21,14 +21,53 @@
         android:background="#F41212"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineOrdine"
+        app:layout_constraintEnd_toEndOf="@+id/guidelineOrdine"
         tools:layout_editor_absoluteY="0dp">
 
         <Button
-            android:id="@+id/startMenuButt"
+            android:id="@+id/menuFragButt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Menu"
+
+            />
+
+        <TextView
+            android:id="@+id/textMenuFrag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="MENU"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/menuRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#F3827A"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/guidelineOrdine"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="0dp">
+
+        <Button
+            android:id="@+id/ordineFragButt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Menu2"
 
             />
 
@@ -39,7 +78,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:text="ordini"
+            android:text="ORDINE"
             android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"

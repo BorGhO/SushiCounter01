@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.keepon.sushicounter01">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/sushi_counter_icon01"
@@ -10,7 +11,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SushiCounter01">
         <activity android:name=".SecondActivity"></activity>
-        <activity android:name=".MenuRecycler"></activity>
 
         <activity
             android:name=".MainActivity"
@@ -22,5 +22,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

@@ -7,20 +7,7 @@
     android:background="#FFEB3B"
     tools:context=".ui.notifications.NotificationsFragment">
 
-    <TextView
-        android:id="@+id/text_notifications"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    <!--
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="200dp"
@@ -30,4 +17,62 @@
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+-->
+    <Button
+        android:id="@+id/provaKTorButt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+
+        android:layout_marginTop="56dp"
+        android:text="KTor GET"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_notifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/avocado"
+        android:textAlignment="center"
+        android:textSize="10sp"
+
+        app:layout_constraintTop_toBottomOf="@+id/provaKTorButt" />
+
+    <Button
+        android:id="@+id/provaKTorButtDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:text="KTor DELETE"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_notifications" />
+
+    <EditText
+        android:id="@+id/ktorDeleteEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:background="@color/tonno"
+        android:ems="10"
+        android:hint="indice da deletare"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/provaKTorButtDelete"
+        app:layout_constraintTop_toTopOf="@+id/provaKTorButtDelete" />
+
+
+    <TextView
+        android:id="@+id/text_ktor_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/tonno"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintTop_toBottomOf="@+id/provaKTorButtDelete"
+        tools:layout_editor_absoluteX="0dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import android.content.ClipData
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import kotlin.reflect.typeOf
 
 class CoseUtili : ViewModel(){
 
@@ -17,7 +18,9 @@ class CoseUtili : ViewModel(){
 
 
     companion object {
+
         var contatore = 0
         var textToPass :String? = null
+        var provaListaMenu = ArrayList<PiattoClass>()
     }
 }

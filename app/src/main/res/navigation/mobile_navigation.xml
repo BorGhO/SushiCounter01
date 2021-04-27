@@ -22,5 +22,7 @@
         android:id="@+id/navigation_notifications"
         android:name="com.keepon.sushicounter01.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_notifications"
+        android:tag="notifFrag"
+        />
 </navigation>

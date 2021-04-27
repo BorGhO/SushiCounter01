@@ -7,40 +7,49 @@
     tools:context=".SecondActivity">
 
 
-<androidx.constraintlayout.widget.Guideline
-    android:id="@+id/guidelineSecond01"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    app:layout_constraintGuide_begin="?attr/actionBarSize" />
-
-
-    <fragment
-        android:id="@+id/second_host_fragment"
-
-        class="com.keepon.sushicounter01.ui.ordineFolder.OrdineFragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-
-
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineSecond01" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineSecond01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="77dp" />
 
 
 
+    <Button
+        android:id="@+id/backToMainButt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        android:text="toMainAct"
+        android:onClick="toMainAct"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineMain01"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-<Button
-    android:id="@+id/backToMainButt"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginEnd="16dp"
-    android:layout_marginBottom="4dp"
-    android:text="toMainAct"
-    android:onClick="toMainAct"
-    app:layout_constraintBottom_toTopOf="@+id/guidelineMain01"
-    app:layout_constraintEnd_toEndOf="parent" />
+    <Button
+        android:id="@+id/hideFragHostButt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="hideHost"
+        android:text="hide\nhost"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineMain01"
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <Button
+        android:id="@+id/removeButt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="removeButtListener"
+        android:text="remove"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineMain01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/fchiSecButt"
@@ -52,6 +61,38 @@
         android:text="cambia\nfrag"
         app:layout_constraintBottom_toTopOf="@+id/guidelineMain01"
         app:layout_constraintStart_toStartOf="parent" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+
+
+        android:layout_marginTop="36dp"
+        android:background="#8BC34A"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineSecond01"
+        tools:layout_editor_absoluteX="0dp">
+
+        <fragment
+            android:id="@+id/second_host_fragment"
+
+
+            android:name="com.keepon.sushicounter01.ui.ordineFolder.OrdineFragment"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+
+            tools:layout="@layout/fragment_ordine" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Useless" />
+
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

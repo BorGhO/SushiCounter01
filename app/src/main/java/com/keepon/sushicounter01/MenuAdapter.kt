@@ -1,18 +1,14 @@
 package com.keepon.sushicounter01
 
-import android.app.Dialog
 import android.content.Context
-import android.content.Intent
-import android.net.Uri
+
 import android.view.*
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
-class OrdineAdapter (data:ArrayList<PiattoClass>, var context: Context) : RecyclerView.Adapter<OrdineAdapter.ViewHolder>(){
+
+class MenuAdapter (data:ArrayList<PiattoClass>, var context: Context) : RecyclerView.Adapter<MenuAdapter.ViewHolder>(){
 
 
         class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){   //qui si estende la proprità ViewHolder di Recy, che è il contenitore degli elementi
@@ -23,7 +19,7 @@ class OrdineAdapter (data:ArrayList<PiattoClass>, var context: Context) : Recycl
             internal var freccia: ImageView
             internal var categoria: String
             internal var descSelected: Boolean
-
+            //private  var orderViewModel: OrdineViewModel
 
             init{
 
@@ -33,10 +29,9 @@ class OrdineAdapter (data:ArrayList<PiattoClass>, var context: Context) : Recycl
                 freccia = itemView.findViewById(R.id.openDesc01)
                 categoria = ""
                 descSelected = false
+                // = ViewModelProvider(context).get(OrdineViewModel::class.java)
             }
         }
-
-
 
 
         internal var data:List<PiattoClass>
@@ -44,6 +39,7 @@ class OrdineAdapter (data:ArrayList<PiattoClass>, var context: Context) : Recycl
         init{
 
             this.data = data
+
         }
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {     //va fatto l'override di tutti i metodi di RecyclerView.Adapter
@@ -61,6 +57,7 @@ class OrdineAdapter (data:ArrayList<PiattoClass>, var context: Context) : Recycl
             holder.image.setImageResource(data[position].img)
             holder.categoria = data[position].categ
             holder.descSelected = data[position].descSelected
+
 
             descClick(holder)
 /*
@@ -82,21 +79,20 @@ class OrdineAdapter (data:ArrayList<PiattoClass>, var context: Context) : Recycl
                 println("desc " + holder.desc.toString())
                 descClick(holder)
             }
-
-
         }
+
 
         private fun descClick(holded: ViewHolder){
 
             if(holded.descSelected) {
                 holded.freccia.background = context.getDrawable(R.drawable.up_chevron)
                 holded.desc.visibility = View.VISIBLE
+
             }else {
                 holded.freccia.background = context.getDrawable(R.drawable.down_chevron)
-               /* if (holded.categoria == "salmone")
-                    holded.desc.visibility = View.INVISIBLE
-                else*/
-                    holded.desc.visibility = View.GONE
+
+                holded.desc.visibility = View.GONE
+
             }
         }
 
