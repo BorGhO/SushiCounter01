@@ -14,12 +14,17 @@ class OrdineViewModel : ViewModel() {
     }
     val text: LiveData<String> = _text
 
-    fun getOrder() : ArrayList<PiattoClass>{
+    fun getMenu() : ArrayList<PiattoClass>{
 
         return itemsFood.value!!
     }
 
-   fun startOrder(){
+    fun getOrder() : ArrayList<PiattoClass>{
+
+        return orderList.value!!
+    }
+
+   fun startMenu(){
 
        if (itemsFood.value == null){
 
@@ -32,12 +37,24 @@ class OrdineViewModel : ViewModel() {
        }
    }
 
+    fun startOrder(){
+
+        if (orderList.value == null){
+
+            orderList.value = ArrayList<PiattoClass>()
+
+            orderList.value?.add(PiattoClass("Futomaki2", "Il futomaki ha l'alga all'interno", "salmone", R.drawable.futomaki, false))
+
+            orderList.value?.add(PiattoClass("Gunkan2", "Il gunkan è l'evoluzione dell'hosomaki", "tonno", R.drawable.gunkan, false))
+
+        }
+    }
 
     companion object {
 
         var cliccato = false
         var itemsFood : MutableLiveData<ArrayList<PiattoClass>> = MutableLiveData()
-
+        var orderList : MutableLiveData<ArrayList<PiattoClass>> = MutableLiveData()
     }
 
 
