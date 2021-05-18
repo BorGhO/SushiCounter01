@@ -42,7 +42,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_ordine, R.id.navigation_notifications))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-//pp
+//prova per questo branch
+        var coso = 2
         navController.addOnDestinationChangedListener { nc: NavController, nd: NavDestination, bundle: Bundle? ->
 
 
