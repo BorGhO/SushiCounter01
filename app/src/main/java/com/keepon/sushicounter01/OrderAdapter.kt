@@ -3,12 +3,14 @@ package com.keepon.sushicounter01
 import android.content.Context
 
 import android.view.*
+import android.widget.Adapter
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class OrderAdapter (data:ArrayList<PiattoClass>, var context: Context) : RecyclerView.Adapter<OrderAdapter.ViewHolder>(){
+
+class OrderAdapter (data:ArrayList<PiattoClass>, var context: Context) : RecyclerView.Adapter<OrderAdapter.ViewHolder>() {
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){   //qui si estende la proprità ViewHolder di Recy, che è il contenitore degli elementi
@@ -90,11 +92,13 @@ class OrderAdapter (data:ArrayList<PiattoClass>, var context: Context) : Recycle
 
         }else {
             holded.freccia.background = context.getDrawable(R.drawable.down_chevron)
-
             holded.desc.visibility = View.GONE
-
         }
+
+
     }
+
+
 
     override fun getItemCount(): Int{
 

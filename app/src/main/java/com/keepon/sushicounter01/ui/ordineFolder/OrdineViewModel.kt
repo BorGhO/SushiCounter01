@@ -43,16 +43,26 @@ class OrdineViewModel : ViewModel() {
 
             orderList.value = ArrayList<PiattoClass>()
 
-            orderList.value?.add(PiattoClass("Futomaki2", "Il futomaki ha l'alga all'interno", "salmone", R.drawable.futomaki, false))
+            orderList.value?.add(PiattoClass("Piatti", "Qui Compariranno i piatti selezionati", "hint", R.drawable.futomaki, false))
 
-            orderList.value?.add(PiattoClass("Gunkan2", "Il gunkan è l'evoluzione dell'hosomaki", "tonno", R.drawable.gunkan, false))
+            //orderList.value?.add(PiattoClass("Gunkan2", "Il gunkan è l'evoluzione dell'hosomaki", "tonno", R.drawable.gunkan, false))
 
         }
     }
 
+
+    fun addToOrder(indice : Int){
+
+        val firstElementOrderListCat = orderList.value?.get(0)?.categ ?: "none"
+        if(firstElementOrderListCat  == "hint")
+            orderList.value?.removeAt(0)
+
+        orderList.value!!.add(itemsFood.value!![indice])
+
+    }
+
     companion object {
 
-        var cliccato = false
         var itemsFood : MutableLiveData<ArrayList<PiattoClass>> = MutableLiveData()
         var orderList : MutableLiveData<ArrayList<PiattoClass>> = MutableLiveData()
     }

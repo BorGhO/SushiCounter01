@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
         val isEditing :Boolean = savedInstanceState?.getBoolean(listaKeyBool, false) == true
         val indice : Int = savedInstanceState?.getInt(listaKeyInt, -1) ?: 666
         println("isEditingMain: " + isEditing + " indiceMain:" + indice)
-        var coso = 0;
+
     }//fine onCreate
 
     fun toSecondAct(view: View){
@@ -132,8 +132,8 @@ class MainActivity : AppCompatActivity() {
 
             supportFragmentManager.fragments.forEach {
                 if (it != fragment && it.isAdded) {
-                    println("coso")
-                   // support.hide(it)
+
+
                 }
             }
             //}
@@ -148,7 +148,7 @@ class MainActivity : AppCompatActivity() {
         val isEditing :Boolean = savedInstanceState?.getBoolean(listaKeyBool, false) == true
         val indice : Int = savedInstanceState?.getInt(listaKeyInt, -1) ?: 666
         println("isEditingRestore: " + isEditing + " indiceRestore:" + indice)
-        var coso = 0;
+
 
     }
 */

@@ -83,7 +83,7 @@ class SecondActivity : AppCompatActivity() {
         //frammenti.remove(OrdineFragment())
 
         val transaction = supportFragmentManager.beginTransaction()
-       // transaction.addToBackStack("coso")
+
 
 
 
